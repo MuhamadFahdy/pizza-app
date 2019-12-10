@@ -1,11 +1,10 @@
-
 <?php
 $data = file_get_contents('data/pizza.json');
 $menu = json_decode($data, true);
 
 $menu = $menu["menu"];
 ?>
-
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -43,6 +42,7 @@ $menu = $menu["menu"];
                 <h1>All Menu</h1>
             </div>
         </div>
+
         <div class="row">
             <?php foreach ($menu as $row) : ?>
                 <div class="col-md-4">
@@ -59,7 +59,6 @@ $menu = $menu["menu"];
             <?php endforeach; ?>
         </div>
     </div>
-    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
